@@ -31,3 +31,6 @@ background-color: #f8f4f8;
     padding: 10px;
 }
 
+.navbar-light .navbar-nav .nav-link {
+    color: white;
+}

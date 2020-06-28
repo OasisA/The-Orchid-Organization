@@ -1,0 +1,33 @@
+h1, p, a, h2 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color: #800080;
+}
+.jumbotron{
+background-color: #f8f4f8;
+}
+
+.bg-light {
+    background-color: #800080!important;
+}
+.btn-outline-dark {
+    color: #f8f4f8;
+    border-color: #f8f4f8;
+}
+
+.btn-dark{
+    background-color: #800080;
+}
+
+.img{
+    width: 5%;
+    height: 5%;
+}
+.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show, .dropdown-toggle>.nav-link {
+    color: #f8f4f8;
+}
+
+.navbar {
+    position: relative;
+    padding: 10px;
+}
+

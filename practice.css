@@ -32,10 +32,28 @@ background-color: #f8f4f8;
 }
 
 .navbar-light .navbar-nav .nav-link {
-    color: white;
+    color: #f8f4f8;
 }
 
 #team{
     width: 150px;
     height: 150px;
+}
+.btn-outline-dark2 {
+    color: #800080;
+    border-color: #800080;
+}
+
+.card {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #f8f4f8;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
 }

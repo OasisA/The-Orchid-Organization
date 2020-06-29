@@ -1,4 +1,4 @@
-h1, p, a, h2 {
+h1, p, a, h2, h5 {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         color: #800080;
 }
@@ -33,4 +33,9 @@ background-color: #f8f4f8;
 
 .navbar-light .navbar-nav .nav-link {
     color: white;
+}
+
+#team{
+    width: 150px;
+    height: 150px;
 }

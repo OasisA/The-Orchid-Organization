@@ -1,6 +1,10 @@
-h1, p, a, h2, h5 {
+h1, p, a, h2, h5, h4, h6, #form {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         color: #800080;
+    
+}
+p{
+    margin: 0
 }
 .jumbotron{
 background-color: #f8f4f8;
@@ -56,4 +60,36 @@ background-color: #f8f4f8;
     background-clip: border-box;
     border: 1px solid rgba(0,0,0,.125);
     border-radius: .25rem;
+}
+img{
+    width: 350px;
+    height: auto;
+}
+
+input {
+    background: none;
+    color: #800080;
+    font-size: 18px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 100%;
+    border-radius: 0;
+    border-color: #800080;  }
+  input:focus {
+    outline: none;
+  }
+
+body{
+    color: #f8f4f8;
+}
+
+.suggestions{
+    color:#800080; ;
+}
+
+a:not([href]){
+    color: #f8f4f8;
+}
+h6 {
+    font-size: 14px;
 }

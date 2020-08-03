@@ -9,7 +9,7 @@ var x = document.getElementById("demo");
      } else { 
        x.innerHTML = "Geolocation is not supported by this browser.";
      }
-   }
+   
    
    function showPosition(position) {
      var lat = position.coords.latitude;
@@ -52,5 +52,7 @@ var x = document.getElementById("demo");
         //$("#tips").append("<p> → The UV index today is " + radiation + ". " + tipResult +"</p>");
 
          })
+      }
    }
+   
 submitEl.addEventListener("click", getLocation);

@@ -47,7 +47,11 @@ background-color: #f8f4f8;
     color: #800080;
     border-color: #800080;
 }
+.ideathon{
+    padding-top: auto;
+    padding-bottom: auto;
 
+}
 .card {
     position: relative;
     display: -ms-flexbox;

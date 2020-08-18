@@ -2,7 +2,7 @@
 var submitEl = document.querySelector("#submit");
 
 var x = document.getElementById("demo");
-
+$(".loading").hide()
 function getLocation() {
    if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(showPosition);
@@ -48,12 +48,18 @@ function getLocation() {
             else {
                tipResult = "EXTRA PROTECTION REQUIRED.  Your exposure to UV radiation will be extreme. Make sure to take all necessary precautions, it is vital that you use at least sunscreen SPF 30+, reapply suncreen every 2 hours. Wear sunglasses and a hat if it is a bright day, and try to find shade when the sun is at its highest point during midday. Wear long sleeved shirts and pants. Try to avoid sun exposure between 10 AM and 4PM.";
             }
+            $(document).ready(function() {
+               $(".loading").hide()
+
             document.querySelector("#tips").textContent = "→ The UV index today is " + radiation + ". " + tipResult;
             //$("#tips").append("<p> → The UV index today is " + radiation + ". " + tipResult +"</p>");
-
+            })
          })
    }
 }
 
 submitEl.addEventListener("click", getLocation);
+$(".btn-lg").on("click", function(){
+   $(".loading").show()
+})
 

@@ -6,6 +6,7 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="practice.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <title>The Orchid Organization</title>
 
@@ -82,16 +83,28 @@
                <p>(This application returns the UV index based on your current location.)</p>
                     <br>
                       
-                            <a class="btn btn-dark btn-lg" role="button"button id = "submit">Click Here to Start</a>
+                            <a class="btn btn-dark btn-lg" role="button" button id = "submit">Click Here to Start</a>
                     <hr class="my-4">
          <div>
              <h4>How to best protect yourself from the sun:</h4>
              <h6>Give it a few seconds to let the magic happen!</h6>
              <p class = "suggestions"><span id = "tips"></span></p>
+             <div class ="loading">
+             <div class="spinner-grow text-dark" role="status">
+              <span class="sr-only">Loading...</span>
+            </div>
+            <div class="spinner-grow text-dark" role="status">
+              <span class="sr-only">Loading...</span>
+            </div>
+            <div class="spinner-grow text-dark" role="status">
+              <span class="sr-only">Loading...</span>
+            </div>
+          </div>
          </div>
                 </div>
                 <div class="col-lg-4">
                     <img src = "https://purplesunmassage.com/images/purple-sun-spiral.png" alt = "purple sun">
+                    
                 </div>
             </div>         
       

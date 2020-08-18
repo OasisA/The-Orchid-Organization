@@ -96,3 +96,13 @@ a:not([href]){
 h6 {
     font-size: 14px;
 }
+
+
+.dropdown-item {
+    color: #800080;
+}
+
+.text-dark {
+    color: #800080!important;
+}
+

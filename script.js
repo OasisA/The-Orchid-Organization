@@ -28,7 +28,7 @@ function getLocation() {
             console.log(queryURL);
             // Log the resulting object
             console.log(response);
-            var radiation = parseInt(response.current.uvi)
+            var radiation = (response.current.uvi)
             console.log(radiation)
             if (radiation <= 0) {
                tipResult = "Unfortunately, any number less than 0 is not a valid input, please check you UV index input again.";

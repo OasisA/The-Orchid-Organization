@@ -14,6 +14,8 @@ function getLocation() {
    function showPosition(position) {
       var lat = position.coords.latitude;
       var long = position.coords.longitude;
+      console.log(lat)
+      console.log(long)
       var apiKey = "41a968a554e08400bdb869bdc6f1430c"
       console.log(position.coords.latitude)
       var queryURL = "https://api.openweathermap.org/data/2.5/onecall?lat=" + lat + "&lon=" + long + "&appid=" + apiKey
@@ -48,10 +50,10 @@ function getLocation() {
             else {
                tipResult = "EXTRA PROTECTION REQUIRED.  Your exposure to UV radiation will be extreme. Make sure to take all necessary precautions, it is vital that you use at least sunscreen SPF 30+, reapply suncreen every 2 hours. Wear sunglasses and a hat if it is a bright day, and try to find shade when the sun is at its highest point during midday. Wear long sleeved shirts and pants. Try to avoid sun exposure between 10 AM and 4PM.";
             }
+            console.log("→ The UV index today is " + radiation + ". " + tipResult)
             $(document).ready(function() {
                $(".loading").hide()
 
-            document.querySelector("#tips").textContent = "→ The UV index today is " + radiation + ". " + tipResult;
             $("#tips").append("<p> → The UV index today is " + radiation + ". " + tipResult +"</p>");
             })
          })
@@ -60,6 +62,7 @@ function getLocation() {
 
 submitEl.addEventListener("click", getLocation);
 $(".btn-lg").on("click", function(){
+   $("#tips").empty()
    $(".loading").show()
 })
 

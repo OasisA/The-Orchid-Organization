@@ -52,7 +52,7 @@ function getLocation() {
                $(".loading").hide()
 
             document.querySelector("#tips").textContent = "→ The UV index today is " + radiation + ". " + tipResult;
-            //$("#tips").append("<p> → The UV index today is " + radiation + ". " + tipResult +"</p>");
+            $("#tips").append("<p> → The UV index today is " + radiation + ". " + tipResult +"</p>");
             })
          })
    }

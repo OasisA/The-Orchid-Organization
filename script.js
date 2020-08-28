@@ -1,5 +1,20 @@
 
 var submitEl = document.querySelector("#submit");
+console.log(Notification.permission)
+
+function showNotification()
+{const notification = new Notification ("Hi there!",
+{body: "hey mate",
+icon: "logo.png"})}
+
+if (Notification.permission ==="granted")
+{alert("we have permission");} 
+else if(Notification.permission !=="denied")
+{Notification.requestPermission().then(permission => {console.log(permission)
+   if (permission ==="granted")
+
+{   showNotification();} })}
+
 
 var x = document.getElementById("demo");
 $(".loading").hide()

@@ -1,19 +1,19 @@
 
 var submitEl = document.querySelector("#submit");
-console.log(Notification.permission)
+// console.log(Notification.permission)
 
-function showNotification()
-{const notification = new Notification ("Hi there!",
-{body: "hey mate",
-icon: "logo.png"})}
+// function showNotification()
+// {const notification = new Notification ("Hi there!",
+// {body: "hey mate",
+// icon: "logo.png"})}
 
-if (Notification.permission ==="granted")
-{alert("we have permission");} 
-else if(Notification.permission !=="denied")
-{Notification.requestPermission().then(permission => {console.log(permission)
-   if (permission ==="granted")
+// if (Notification.permission ==="granted")
+// {alert("we have permission");} 
+// else if(Notification.permission !=="denied")
+// {Notification.requestPermission().then(permission => {console.log(permission)
+//    if (permission ==="granted")
 
-{   showNotification();} })}
+// {   showNotification();} })}
 
 
 var x = document.getElementById("demo");
@@ -74,7 +74,30 @@ function getLocation() {
          })
    }
 }
-
+var search = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=sunscreen&api-key=KB0vpcVSFD9HqcZStG9cZH58IL6CINac"
+      $.ajax({
+         url: search,
+         method: "GET"
+      })
+         .then(function (response) {
+            console.log(response.response.docs)
+            for (i = 0; i <2; i++){
+               var $article = $("\
+            <div class='card'>\
+            <img src=http://static01.nyt.com/" + response.response.docs[i].multimedia[0].url+" class='card-img-top' alt='image' style = 'height:400px; width: 100%; flex: 1 1 auto;min-height: 1px;padding: 1.25rem;'> \
+            <div class='card-body'> \
+            <h5 class='card-title'>"+response.response.docs[i].headline.main+"</h5>\
+            <p><i>"+response.response.docs[i].byline.original+"</i></p>\
+            <p class='card-text'>"+response.response.docs[i].lead_paragraph+"</p>\
+        </div>\
+        <br>\
+        <div class='card-footer'>\
+        <a class='btn btn-dark btn-lg' role='button' href="+response.response.docs[i].web_url+"> Read the Article Here</a>\
+        </div>\
+")
+$(".card-deck").append($article);
+            }
+         })
 submitEl.addEventListener("click", getLocation);
 $(".btn-lg").on("click", function(){
    $("#tips").empty()

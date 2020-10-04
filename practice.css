@@ -109,3 +109,8 @@ h6 {
     bottom: 0
     
 }
+.card-deck {
+ 
+    margin-right: 15px;
+    margin-left: 15px;
+}

@@ -80,7 +80,6 @@ var search = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=sunscre
          method: "GET"
       })
          .then(function (response) {
-            console.log(response.response.docs)
             for (i = 0; i <2; i++){
                var $article = $("\
             <div class='card'>\
